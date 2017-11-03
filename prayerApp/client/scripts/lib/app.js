@@ -9,6 +9,9 @@ import { Meteor } from 'meteor/meteor';
  
 // Modules
 import CompassCtrl from '../controllers/compass.controller';
+import TimingCtrl from '../controllers/timing.controller';
+import NotificationsCtrl from '../controllers/notifications.controller';
+import SettingsCtrl from '../controllers/settings.controller';
 import RoutesConfig from '../routes'; 
 
 var App = 'PrayerApp';
@@ -21,6 +24,9 @@ Angular.module(App, [
  
 new Loader(App)
   .load(CompassCtrl)
+  .load(TimingCtrl)
+  .load(NotificationsCtrl)
+  .load(SettingsCtrl)
   .load(RoutesConfig);
 
 // Startup
